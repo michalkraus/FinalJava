@@ -37,6 +37,17 @@ public class RandomGenerator {
         }
     }
 
+    public int getNumberFromScores (int index) {
+            return scores[index];
+    }
+
+    public int[] setScores (int[] scores) {
+        this.scores = scores;
+        return scores;
+
+    }
+
+
 //**//Constructor
     public RandomGenerator(int maxNumber, int howManyNumbers){
             this.maxNumber = maxNumber;
@@ -51,8 +62,8 @@ public class RandomGenerator {
             scores = new int[howManyNumbers]; //New 1D [] Score with howManyNumbers index
             Random random = new Random();//Random() Run
 
-            System.out.println("\nHow many Numbers I will generate: " + howManyNumbers);
-            System.out.println("What is my Table length: " + scores.length);
+//            System.out.println("\nHow many Numbers I will generate: " + howManyNumbers);
+//            System.out.println("What is my Table length: " + scores.length);
 
 
             //index starts from 0.. so howManyNumbers-1 is the last index.
