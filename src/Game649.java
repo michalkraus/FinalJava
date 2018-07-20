@@ -16,7 +16,7 @@ public class Game649 {
         System.out.println("\n...Welcome to the Lottery...");
 
         //Lottery number 1
-        System.out.println("\nLet's start the Lottery Number 1.\nRemember you will never get the same number twice :)");
+        System.out.println("\nLet's start the Lottery Number 1.\nRemember you will never get the same number twice in one Lottery:)");
         game649.numberGenerator();
 
         System.out.println("\nnumberGenerator() did the job and saved all the random numbers to the score[0]\n" +
@@ -37,7 +37,7 @@ public class Game649 {
 
 
         //Lottery number 2
-        System.out.println("This is Lottery Number 2: ");
+        System.out.println("\nThis is Lottery Number 2: ");
         game649.numberGenerator();
         table.add(1,game649.scores);
         assignTable = table.get(1);
@@ -50,7 +50,7 @@ public class Game649 {
         assignTable = table.get(2);
         game649.setScores(assignTable);
 
-        System.out.println("We've had 3 lotteries already");
+        System.out.println("\nWe've had 3 lotteries already");
         System.out.println("here we have a results:");
 
         System.out.println("\n\nLottery 1: ");
