@@ -68,6 +68,9 @@ public class RandomGenerator {
 
             //index starts from 0.. so howManyNumbers-1 is the last index.
             while (scores[howManyNumbers-1] == 0) {
+                if (maxNumber <= howManyNumbers){
+                    System.out.println("You cannot have have drawn numbers than is in the pool!");
+                    break;}
 //                System.out.println("\nJestem w pierwsym loop WHILE");
 
                     randomNumber = random.nextInt(maxNumber) + 1;
