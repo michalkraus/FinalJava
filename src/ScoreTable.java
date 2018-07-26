@@ -1,7 +1,5 @@
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ScoreTable {
 
@@ -11,12 +9,18 @@ public class ScoreTable {
     //ArrayList.ADD function
     public void add (int index, int[] x) {
         scoreTable.add(index, x);
-        System.out.println(scoreTable.get(index));
+        System.out.println("Index: " + index + " " + scoreTable.get(index));
         }
 
     //ArrayList.GET function
     public int[] get (int index) {
-        scoreTable.get(index);
-        return (scoreTable.get(index));
+        if (scoreTable.isEmpty()) {
+            System.out.println("No Scores yet!");
+            return null;
+
+        } else {
+            scoreTable.get(index);
+            return (scoreTable.get(index));
+        }
     }
 }

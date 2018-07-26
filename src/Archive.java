@@ -1,4 +1,61 @@
 /*
+//Customize GAME from CusotmizeGame class:
+    public void customizeYourGame() {
+        CustomizeGame customGame = new CustomizeGame();
+        customGame.newCustomizeGame();
+
+
+//        int userChoice;
+//        int index = 0;
+//
+//        do {
+//            System.out.println(customizeGameMenu());
+//            userChoice = scanner.nextInt();
+//            System.out.println("CUSTOMIZE YOUR GAME:");
+//
+//            switch (userChoice){
+//
+//                case 1: //New Game
+//                    int howManyTimesPlay;
+//                    System.out.println("How Many numbers will you drawn?");
+//                    gameXX.setHowManyNumbeers(scanner.nextInt());
+//                    System.out.println("How Many numbers would you like to have in the pool");
+//                    gameXX.setMaxNumber(scanner.nextInt());
+//
+//                    System.out.println("How Many times would you like to play?");
+//                    howManyTimesPlay = scanner.nextInt();
+//
+//                    for(int i=0; i < howManyTimesPlay; i++){
+//                        gameXX.numberGenerator();
+//                        //gameXX.getScores();
+//                        table.add(index, gameXX.scores);
+//                        index++;
+//                     }
+//
+//                     System.out.println("Thanks, done: " + howManyTimesPlay + " lotteries.\n");
+//                     break;
+//
+//
+//                case 2: //Scores
+//
+//                     break;
+//
+////                case 3:
+////                    break;
+//                case 4: //Quit
+//                    break;
+//
+//                default:
+//                    System.out.println("Wrong Choice.\nPlease try again.");
+//
+//            }
+//
+//        } while (userChoice != 4);
+    }
+
+
+
+
 //****************
 //import java.util.ArrayList;
 //import java.util.Arrays;
@@ -133,3 +190,22 @@
 //
 //
 ////
+
+
+
+//        ArrayList<int[]> arl = new ArrayList<int[]>();
+//
+//        int a1[] = {1, 2, 3};
+//        arl.add(0, a1);
+//        System.out.println("Arraylist contains:" + arl.get(0)[0]);
+
+//        // List of String arrays
+//        List<String[]> list = new ArrayList<String[]>();
+//
+//        String[] arr1 = { "a", "b", "c" };
+//        String[] arr2 = { "1", "2", "3", "4" };
+//        list.add(arr1);
+//        list.add(arr2);
+//        // printing list of String arrays in the ArrayList
+//        for (String[] strArr : list) {
+//            System.out.println(Arrays.toString(strArr));

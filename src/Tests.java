@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -6,24 +7,31 @@ public class Tests {
 
     public static void main(String[] args) {
 
-        ArrayList<int[]> arl=new ArrayList<int[]>();
+        double x;
+        double z;
+        double y;
 
-        int a1[]={1,2,3};
-        arl.add(0,a1);
-        System.out.println("Arraylist contains:"+arl.get(0)[0]);
+        x = factorial(6);
+        z = factorial(49);
+        y = factorial(43);
 
+        System.out.println(x);
+        System.out.println(z);
+        System.out.println(y);
 
-        //        // List of String arrays
-//        List<String[]> list = new ArrayList<String[]>();
-//
-//        String[] arr1 = { "a", "b", "c" };
-//        String[] arr2 = { "1", "2", "3", "4" };
-//        list.add(arr1);
-//        list.add(arr2);
-//        // printing list of String arrays in the ArrayList
-//        for (String[] strArr : list) {
-//            System.out.println(Arrays.toString(strArr));
-//        }
-   }
+        double chance = z / (x*y);
+        int chanceInt = (int)chance;
+        System.out.println(chanceInt);
+
+    }
+
+    public static double factorial(double n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n-1);
+        }
+    }
+
 
 }
