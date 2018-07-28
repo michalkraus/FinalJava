@@ -1,10 +1,9 @@
 import java.util.*;
-import java.util.ArrayList;
 
-public class RandomGenerator {
+public class RandomGenerator extends Tables {
 
     // Attributes
-    private int maxNumber;
+    private int numbersInPool;
     private int howManyNumbers;
 
     public int [] scores;
@@ -12,14 +11,13 @@ public class RandomGenerator {
 
 
 
-//**// Max Number****************************************
-    public int setMaxNumber(int maxNumber) {
-        this.maxNumber = maxNumber;
-        return maxNumber;
+//**//NumbersInPool****************************************
+    public int setNumbersInPool(int numbersInPool) {
+        this.numbersInPool = numbersInPool;
+        return numbersInPool;
     }
 
-    public int getMaxNumber() {return maxNumber;}
-
+    public int getNumbersInPool() {return numbersInPool;}
 
 //**//How Many Numbers***********************************
     public int setHowManyNumbeers(int howManyNumbers) {
@@ -33,26 +31,34 @@ public class RandomGenerator {
 //**//Scores***********************************
     public void getScores () {
         for (int i = 0; i < howManyNumbers; i++) {
+
+//            if(scores[0] == 0){
+//                System.out.println("No Scores!");
+//                break;
+//
+//            } else
             System.out.println(scores[i]);
         }
-    }
-
-    public int getNumberFromScores (int index) {
-            return scores[index];
     }
 
     public int[] setScores (int[] scores) {
         this.scores = scores;
         return scores;
-
     }
 
+    public int getNumberFromScores (int index) {
+        return scores[index];
+    }
+
+    public int [] clearGeneratorScores(){
+        return scores = new int [howManyNumbers];
+    }
 
 //**//Constructor
-    public RandomGenerator(int maxNumber, int howManyNumbers){
-            this.maxNumber = maxNumber;
+    public RandomGenerator(int numbersInPool, int howManyNumbers){
+            this.numbersInPool = numbersInPool;
             this.howManyNumbers = howManyNumbers;
-            this.scores = scores;
+            this.scores = new int[howManyNumbers];
         }
 
 
@@ -62,39 +68,35 @@ public class RandomGenerator {
             scores = new int[howManyNumbers]; //New 1D [] Score with howManyNumbers index
             Random random = new Random();//Random() Run
 
-//            System.out.println("\nHow many Numbers I will generate: " + howManyNumbers);
-//            System.out.println("What is my Table length: " + scores.length);
-
-
             //index starts from 0.. so howManyNumbers-1 is the last index.
             while (scores[howManyNumbers-1] == 0) {
-                if (maxNumber <= howManyNumbers){
+//First Loop
+                if (numbersInPool <= howManyNumbers){
                     System.out.println("You cannot have have drawn numbers than is in the pool!");
-                    break;}
-//                System.out.println("\nJestem w pierwsym loop WHILE");
-
-                    randomNumber = random.nextInt(maxNumber) + 1;
-//                    System.out.println("Losowa liczba to: " + randomNumber);
-
-                    for (int j = 0; j < howManyNumbers; j++) {
-//                        System.out.println("Jestem w 2 loopie");
-                        if (scores[j] == randomNumber){
-                            break;
-                        }
-                        else if (scores[j] == 0) {
-//                            System.out.println("Spelniam warunek i daje wartosc wartosc");
-                            scores[j] = randomNumber;
-//                            System.out.println("Wyciagagam wartosc" + scores[j]);
-                            break;
-                        }
-                    }
+                    break;
                 }
-              //End of the While LOOP
+                else {
+                    randomNumber = random.nextInt(numbersInPool) + 1;
+                    for (int j = 0; j < howManyNumbers; j++) {
+//Second Loop
+                        if (scores[j] == randomNumber) {
+                            break;
+                        } else if (scores[j] == 0) {
+                            scores[j] = randomNumber;
+                            break;
+                        }
+
+                    }//End of the Second Loop
+                }
+            } //End of the First - While LOOP
             return scores[howManyNumbers-1];
         }
+
+
 
         public String toString () {
             return "" + randomNumber;
         }
 
-}
+
+}//End of RandomGenerator Class

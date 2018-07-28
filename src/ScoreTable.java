@@ -15,12 +15,23 @@ public class ScoreTable {
     //ArrayList.GET function
     public int[] get (int index) {
         if (scoreTable.isEmpty()) {
-            System.out.println("No Scores yet!");
+            System.out.println("No Scores yet! (scoreTable.isEmpty");
             return null;
-
-        } else {
+        } else if (scoreTable == null){
+            System.out.println("No Scores yet! (scoreTable == null)");
+            return null;
+        }
+        else {
             scoreTable.get(index);
             return (scoreTable.get(index));
         }
     }
+
+    //ArrayList.CLEAR function
+    public void clear () {
+        this.scoreTable.removeAll(scoreTable);
+    }
+
+
+
 }

@@ -87,8 +87,9 @@ public class LottoProgram {
 //customizeGameMenu
     public static String customizeGameMenu() {
         String menu = "1. New Game\n";
-        menu += "2. Scores\n";
-        menu += "4. Quit\n";
+        menu += "2. Show Scores\n";
+        menu += "3. Clear Scores\n";
+        menu += "4. Reset & Quit\n";
 
         menu += "Please make a selection";
         return menu;

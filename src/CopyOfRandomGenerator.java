@@ -13,12 +13,12 @@
 //
 //
 //    //**// Max Number****************************************
-//    public int setMaxNumber(int maxNumber) {
+//    public int setNumbersInPool(int maxNumber) {
 //        this.maxNumber = maxNumber;
 //        return maxNumber;
 //    }
 //
-//    public int getMaxNumber() {return maxNumber;}
+//    public int getNumbersInPool() {return maxNumber;}
 //
 //
 //    //**//How Many Numbers***********************************
