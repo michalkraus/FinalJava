@@ -1,4 +1,6 @@
+import java.lang.reflect.Method;
 import java.util.Scanner;
+
 public class LottoProgram {
 
     private final static int CUSTOMIZE_GAME = 1;
@@ -12,10 +14,12 @@ public class LottoProgram {
     protected RandomGenerator gameXX = new RandomGenerator(xMaxNumber,xHowManyNumbers);
     protected ScoreTable table = new ScoreTable();
 
-    protected Scanner scanner = new Scanner(System.in);
+
+    Scanner scanner = new Scanner(System.in);
+    protected int userChoice;
 
 
-//MAIN STARTS HERE
+    //MAIN STARTS HERE
     public static void main (String [] args) {
 
         LottoProgram myProgram = new LottoProgram();
@@ -24,14 +28,14 @@ public class LottoProgram {
 
 //RUN method
     public void run() {
-        int userChoice;
+        //int userChoice;
         do {
             System.out.println(menu());
-            userChoice = scanner.nextInt();
+            userChoice = scanner.nextInt(); //getIntInput(scanner,menu());
 
             switch (userChoice) {
                 case LottoProgram.CUSTOMIZE_GAME:
-                   customizeYourGame();
+                    customizeYourGame();
                     break;
 
                 case LottoProgram.GAME649:
@@ -45,6 +49,7 @@ public class LottoProgram {
                 case LottoProgram.QUIT:
                     System.out.println("Good Luck with Lotteries!");
                     break;
+
                 default:
                     System.out.println("Wrong Choice.\nPlease try again.");
             }
@@ -52,10 +57,11 @@ public class LottoProgram {
     }
 
 
+
 //1. Customize GAME
     public void customizeYourGame() {
-        CustomizeGame customGame = new CustomizeGame();
-        customGame.newCustomizeGame();
+        CustomizeGame customizeGame = new CustomizeGame();
+        customizeGame.newCustomizeGame();
     }
 
 //2. GAME 649
@@ -66,8 +72,8 @@ public class LottoProgram {
 //3. TABLE_SCORES
     public void tableScores() {
         System.out.println("\n This is your table Scores from the last draw:");
-        gameXX.getScores();
-        table.add(0,gameXX.scores);
+        gameXX.getDrawnNumbersTable();
+        table.add(0,gameXX.randomGeneratorTables.drawnNumbersTable);
         System.out.println("Done");
     }
 
@@ -87,17 +93,31 @@ public class LottoProgram {
 //customizeGameMenu
     public static String customizeGameMenu() {
         String menu = "1. New Game\n";
-        menu += "2. Show Scores\n";
-        menu += "3. Clear Scores\n";
-        menu += "4. Reset & Quit\n";
+        menu += "2. Player Table\n";
+        menu += "3. Show Scores\n";
+        menu += "4. Clear Scores\n";
+        menu += "5. Reset & Quit\n";
 
         menu += "Please make a selection";
         return menu;
     }
 
+//getInput only Integer - Menu
+//    public static int getIntInput(Scanner i, String m) {
+//        System.out.println(m);
+//        try {
+//            return (Integer.parseInt(i.nextLine()));
+//        } catch (NumberFormatException e) {
+//            System.out.println("Wrong Choice.\nPlease try again.");
+//            return getIntInput(i,m);
+//
+//        }
+//    }
 
-
-
+    //Reset Scanner
+    public Scanner resetScanner (){
+        return scanner = new Scanner(System.in);
+    }
 
 
 }//END OF CLASS - LottoProgram

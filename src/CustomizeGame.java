@@ -4,59 +4,72 @@ public class CustomizeGame extends LottoProgram {
     int index = 0;
     int [] rowTable; //row table to display numbers from ArrayList
 
-    public void newCustomizeGame() {
+    Tables playerNumbers = new Tables();
 
+    public void newCustomizeGame() {
 
         int userChoiceCustomizeGame;
         this.index = 0;
 
         do {
             //Welcome TEXT
-            show("..**..CUSTOMIZE YOUR GAME..**..\nPlease build your own lottery...");
+            System.out.println("..**..CUSTOMIZE YOUR GAME..**..\nPlease build your own lottery...");
+            show("chuj");
 
-            show("How Many numbers will you drawn?");
+            System.out.println("\"How Many numbers will you drawn?");
             gameXX.setHowManyNumbeers(scanner.nextInt());
 
-            show("How Many numbers would you like to have in the pool");
+            System.out.println("How Many numbers would you like to have in the pool");
             gameXX.setNumbersInPool(scanner.nextInt());
 
-            if (gameXX.getNumbersInPool() < gameXX.getHowManyNumbers()){
-                show("You cannot have less numbers in pool than you want to drawn! Try again");
+            if (gameXX.getNumbersInPool() == gameXX.getHowManyNumbers()){
+                System.out.println("You cannot have less or the same numbers in pool than you want to drawn! Try again");
             }
-        }while (gameXX.getHowManyNumbers() > gameXX.getNumbersInPool());
+            else if ((gameXX.getHowManyNumbers() ==0) || (gameXX.getNumbersInPool() == 0)) {
+                System.out.println("You cannot have variable 0");
+            }
+
+        }while ((gameXX.getHowManyNumbers() >= gameXX.getNumbersInPool()) || (gameXX.getHowManyNumbers() ==0) || (gameXX.getNumbersInPool() == 0) );
 
         do {
-            show(customizeGameMenu());
-            userChoiceCustomizeGame = scanner.nextInt();
+            System.out.println(customizeGameMenu());
+            userChoiceCustomizeGame = scanner.nextInt(); //getIntInput(scanner,customizeGameMenu());
+
 
             switch (userChoiceCustomizeGame){
 
                 case 1: //New Game
-                    clearScores();
                     int howManyTimesPlay; //attribute How Many Times To Generate Numbers
 
-                    show("How Many times would you like to play?");
+                    System.out.println("How Many times would you like to play?");
                     howManyTimesPlay = scanner.nextInt();
 
                     for(int i=0; i < howManyTimesPlay; i++){
 
                         gameXX.numberGenerator();
 
-                        table.add(index, gameXX.scores);
+                        table.add(index, gameXX.randomGeneratorTables.drawnNumbersTable);
                         index++;
                     }
 
-                    show("Thanks, done: " + howManyTimesPlay + " lotteries.\n");
+                    System.out.println("Thanks, done: " + howManyTimesPlay + " lotteries.\n");
                     break;
 
-                case 2: //Scores
-                    show("Scores from previous lotteries:");
+                case 2: //Player Table
+                    System.out.println("Player Table");
+                    playerNumbers.setNewDrawnNumbersTable(gameXX.howManyNumbers);
+                    playerNumbers.setNewDrawnNumbersTable(gameXX.howManyNumbers);
+                    playerNumbers.setSingleNumberInDrawnNumbersTable(gameXX.howManyNumbers, gameXX.numbersInPool);
+                    break;
 
-                    show("Lottery with index 0");
+                case 3: //Scores
+                    System.out.println("Scores from previous lotteries:");
+
+                    System.out.println("Lottery with index 0");
                     table.get(0);
                     rowTable = table.get(0);
-                    gameXX.setScores(rowTable);
-                    gameXX.getScores();
+                    gameXX.randomGeneratorTables.setDrawnNumbersTable(rowTable);
+                    gameXX.getDrawnNumbersTable();
                     break;
 //
 //                    show("Lottery with index 1");
@@ -66,12 +79,12 @@ public class CustomizeGame extends LottoProgram {
 //                    gameXX.getScores();
 
 
-                case 3: //Clear Scores
-                    show("Scores cleared");
+                case 4: //Clear Scores
+                    System.out.println("Scores cleared");
                     clearScores ();
                     break;
 
-                case 4: //Reset & Quit
+                case 5: //Reset & Quit
                     break;
 
                 default:
@@ -79,11 +92,15 @@ public class CustomizeGame extends LottoProgram {
 
             }
 
-        } while (userChoiceCustomizeGame != 4);
+        } while (userChoiceCustomizeGame != 5);
+
     }
 
+
+
+
 // Method to SHOW text System.out.println() and br() is \n
-    static void show (String text) {
+    static void show(String text) {
         System.out.println(text);
     }
 
@@ -91,20 +108,25 @@ public class CustomizeGame extends LottoProgram {
         System.out.println("\n");
     }
 
+    static String empty () {
+        return "";
+    }
+
 
 //Method to ClearScores
     public int clearScores () {
-        show("Do you want to generate a new game, and wipe the previous scores? Y/N");
+        System.out.println("Do you want to generate a new game, and wipe the previous scores? Y/N");
         String yesNo = scanner.next();
-        show(yesNo);
+        System.out.println(yesNo);
 
         if((yesNo.equals("Y") || yesNo.equals("y") || yesNo.equals("Yes") || yesNo.equals("yes"))){
             table.clear();
-            gameXX.clearGeneratorScores();
+            gameXX.randomGeneratorTables.clearDrawnNumbersTable(gameXX.howManyNumbers);
+            //gameXX.randomGeneratorTables.setSingleDrawnNumebersTable();
             return index = 0;
         }
         else {
-            show("Nothing changed.");
+            System.out.println("Nothing changed.");
             return 0;
         }
     }

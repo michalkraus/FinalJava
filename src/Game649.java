@@ -21,11 +21,11 @@ public class Game649 {
 
         System.out.println("\nnumberGenerator() did the job and saved all the random numbers to the score[0]\n" +
                             "getScores() will show your current numbers here: ");
-        game649.getScores();
+        game649.getDrawnNumbersTable();
 
         System.out.println("\nNow it's time to add the score[0] object with all the numbers to the ScoreTable ArrayList<int[]>\n" +
                 "if you don't know how it looks like, here you go, this is your Array[] with numbers inside the ArrayList: ");
-        table.add(0,game649.scores);
+        table.add(0,game649.randomGeneratorTables.drawnNumbersTable);
 
 
 
@@ -33,22 +33,22 @@ public class Game649 {
                 "and used that new int[]value to setScores");
         table.get(0);
         assignTable = table.get(0);
-        game649.setScores(assignTable);
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
 
 
         //Lottery number 2
         System.out.println("\nThis is Lottery Number 2: ");
         game649.numberGenerator();
-        table.add(1,game649.scores);
+        table.add(1,game649.randomGeneratorTables.drawnNumbersTable);
         assignTable = table.get(1);
-        game649.setScores(assignTable);
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
 
         //Lottery number 3
         System.out.println("This is Lottery Number 3: ");
         game649.numberGenerator();
-        table.add(2,game649.scores);
+        table.add(2,game649.randomGeneratorTables.drawnNumbersTable);
         assignTable = table.get(2);
-        game649.setScores(assignTable);
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
 
         System.out.println("\nWe've had 3 lotteries already");
         System.out.println("here we have a results:");
@@ -56,29 +56,29 @@ public class Game649 {
         System.out.println("\n\nLottery 1: ");
         table.get(0);
         assignTable = table.get(0);
-        game649.setScores(assignTable);
-        game649.getScores();
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
+        game649.getDrawnNumbersTable();
 
         System.out.println("\nLottery 2: ");
         table.get(1);
         assignTable = table.get(1);
-        game649.setScores(assignTable);
-        game649.getScores();
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
+        game649.getDrawnNumbersTable();
 
         System.out.println("\nLottery 3: ");
         table.get(2);
         assignTable = table.get(2);
-        game649.setScores(assignTable);
-        game649.getScores();
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
+        game649.getDrawnNumbersTable();
 
         System.out.println("\nIf you ask, you can get a single number from the scores, example: this index 3(position4)" +
-                "of Lottery 3...: " + game649.getNumberFromScores(3));
+                "of Lottery 3...: " + game649.randomGeneratorTables.getSingleNumberFromDrawnNumbersTable(3));
 
         System.out.println("\n\nand again Lottery 1 if you don't believe :P :");
         table.get(0);
         assignTable = table.get(0);
-        game649.setScores(assignTable);
-        game649.getScores();
+        game649.randomGeneratorTables.setDrawnNumbersTable(assignTable);
+        game649.getDrawnNumbersTable();
 
 
         System.out.println("\n...Thank you!...");
