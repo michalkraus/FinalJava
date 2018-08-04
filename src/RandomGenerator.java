@@ -5,9 +5,10 @@ public class RandomGenerator {
     // Attributes
     protected int numbersInPool;
     protected int howManyNumbers;
-
     protected int randomNumber;
+
     protected Tables rgTable = new Tables();
+
 
     //**//NumbersInPool****************************************
     public int setNumbersInPool(int numbersInPool) {
@@ -29,6 +30,7 @@ public class RandomGenerator {
 //**//Table Methods**********
     public void getDrawnNumbersTable () {
         rgTable.getDrawnNumbersTable(howManyNumbers);
+
     }
 
     public int [] clearDrawnNumbersTable(){

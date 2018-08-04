@@ -1,14 +1,19 @@
 import java.util.Scanner;
 
 //Customize GAME:
-public class CustomizeGame extends LottoProgram {
+public class CustomizeGame  {
     //Attributes
+    Scanner scanner = new Scanner(System.in);
+    Scanner scannerStr = new Scanner(System.in);
 
     public int xNumbersInPool;
     public int xHowManyNumbers;
 
-    int index = 0;
-    int [] rowTable; //row table to display numbers from ArrayList
+    int indexComputer = 0;
+    int indexPlayer = 0;
+    int [] lineTableComputer; //row table to display numbers from ArrayList
+    int [] lineTablePlayer; //row table to display numbers from ArrayList
+
 
     Tables computerTable = new Tables();
     Tables playerTable = new Tables();
@@ -16,31 +21,12 @@ public class CustomizeGame extends LottoProgram {
     protected RandomGenerator gameXX = new RandomGenerator(xNumbersInPool,xHowManyNumbers);
     protected PlayerNumbers playerNumbers = new PlayerNumbers(xNumbersInPool,xHowManyNumbers);
 
-
     public void newCustomizeGame() {
 
         int userChoiceCustomizeGame;
-        this.index = 0;
+        this.indexComputer = 0;
+        this.indexPlayer = 0;
 
-        do {
-            //Welcome TEXT and conditions to calibrate Customize Game.
-            show("..**..CUSTOMIZE YOUR GAME..**..\nPlease build your own lottery...");
-
-            show("How Many numbers will you drawn?");
-            gameXX.setHowManyNumbeers(getIntInput(scanner));
-
-            show("How Many numbers would you like to have in the pool");
-            gameXX.setNumbersInPool(getIntInput(scanner));
-            xNumbersInPool = gameXX.getNumbersInPool();
-
-            if (gameXX.getNumbersInPool() <= gameXX.getHowManyNumbers()){
-                show("You cannot have less or the same numbers in pool than you want to drawn! Try again");
-            }
-            else if ((gameXX.getHowManyNumbers() ==0) || (gameXX.getNumbersInPool() == 0)) {
-                show("You cannot have variable 0");
-            }
-
-        }while ((gameXX.getHowManyNumbers() >= gameXX.getNumbersInPool()) || (gameXX.getHowManyNumbers() ==0) || (gameXX.getNumbersInPool() == 0) );
 
         do {
             System.out.println(customizeGameMenu());
@@ -59,8 +45,8 @@ public class CustomizeGame extends LottoProgram {
 
                         gameXX.numberGenerator();
 
-                        computerTable.add(index, gameXX.rgTable.drawnNumbersTable);
-                        index++;
+                        computerTable.add(indexComputer, gameXX.rgTable.drawnNumbersTable);
+                        indexComputer++;
                     }
 
                     System.out.println("Thanks, done: " + howManyTimesPlay + " lotteries.\n");
@@ -83,15 +69,13 @@ public class CustomizeGame extends LottoProgram {
 
                         playerNumbers.typeYourNumbers();
 
-                        playerTable.add(index, playerNumbers.plTable.drawnNumbersTable);
-                        index++;
+                        playerTable.add(indexPlayer, playerNumbers.plTable.drawnNumbersTable);
+                        indexPlayer++;
 
                         show("Your Numbers are saved under index: " + i);
                     }
 
 
-                    //playerTable.setNewDrawnNumbersTable(gameXX.howManyNumbers);
-                    //playerTable.setSingleNumberInDrawnNumbersTable(gameXX.howManyNumbers, gameXX.numbersInPool);
                     break;
 
                 case 3: //Show Scores - Computer
@@ -99,14 +83,20 @@ public class CustomizeGame extends LottoProgram {
 
                     System.out.println("Lottery with index 0");
                     computerTable.get(0);
-                    rowTable = computerTable.get(0);
-                    gameXX.rgTable.setDrawnNumbersTable(rowTable);
+                    lineTableComputer = computerTable.get(0);
+                    gameXX.rgTable.setDrawnNumbersTable(lineTableComputer);
                     gameXX.getDrawnNumbersTable();
 
                     break;
 
                 case 4: //Show Scores - Player
                     System.out.println("Show Scores - Player");
+
+                    System.out.println("Lottery with index 0");
+                    playerTable.get(0);
+                    lineTablePlayer = playerTable.get(0);
+                    playerNumbers.plTable.setDrawnNumbersTable(lineTablePlayer);
+                    playerNumbers.getDrawnNumbersTable();
 
                     break;
 
@@ -143,14 +133,15 @@ public class CustomizeGame extends LottoProgram {
 //Method to ClearScores
     public int clearScores () {
         System.out.println("Do you want to wipe the previous scores? Y/N");
-        String yesNo = scanner.next();
+        String yesNo = scannerStr.next();
         System.out.println(yesNo);
 
         if((yesNo.equals("Y") || yesNo.equals("y") || yesNo.equals("Yes") || yesNo.equals("yes"))){
+            System.out.println("Wiped!");
             computerTable.clear();
             gameXX.rgTable.clearDrawnNumbersTable(gameXX.howManyNumbers);
-            //gameXX.randomGeneratorTables.setSingleDrawnNumebersTable();
-            return index = 0;
+            //gameXX.randomGeneratorTables.setSingleDrawnNumbersTable();
+            return indexComputer = 0;
         }
         else {
             System.out.println("Nothing changed.");
@@ -173,7 +164,7 @@ public class CustomizeGame extends LottoProgram {
     }
 
 
-//getInput only Integer
+    //getInput only Integer
     public static int getIntInput(Scanner i) {
         try {
             return (Integer.parseInt(i.nextLine()));
@@ -183,6 +174,20 @@ public class CustomizeGame extends LottoProgram {
         }
     }
 
+    //customizeGameMenu
+    public static String customizeGameMenu() {
+        String menu = "1. New Game - Computer Numbers\n";
+        menu += "2. New Game - Player Numbers\n";
+        menu += "3. Show Scores - Computer\n";
+        menu += "4. Show Scores - Player\n";
+        menu += "5. Clear Scores - Computer\n";
+        menu += "6. Clear Scores - Player\n";
+        menu += "7. Reset & Quit\n";
+
+
+        menu += "Please make a selection";
+        return menu;
+    }
 
 
 }//End of the Class

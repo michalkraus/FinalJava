@@ -53,13 +53,47 @@ public class LottoProgram {
 //1. Customize GAME
     public void customizeYourGame() {
         CustomizeGame customizeGame = new CustomizeGame();
+        do {
+            //Welcome TEXT and conditions to calibrate Customize Game.
+            show("..**..CUSTOMIZE YOUR GAME..**..\nPlease build your own lottery...");
+
+            show("How Many numbers will you drawn?");
+            customizeGame.gameXX.setHowManyNumbeers(getIntInput(scanner));
+
+            show("How Many numbers would you like to have in the pool");
+            customizeGame.gameXX.setNumbersInPool(getIntInput(scanner));
+            customizeGame.xNumbersInPool = customizeGame.gameXX.getNumbersInPool();
+
+            if (customizeGame.gameXX.getNumbersInPool() <= customizeGame.gameXX.getHowManyNumbers()){
+                show("You cannot have less or the same numbers in pool than you want to drawn! Try again");
+            }
+            else if ((customizeGame.gameXX.getHowManyNumbers() ==0) || (customizeGame.gameXX.getNumbersInPool() == 0)) {
+                show("You cannot have variable 0");
+            }
+
+        }while ((customizeGame.gameXX.getHowManyNumbers() >= customizeGame.gameXX.getNumbersInPool()) || (customizeGame.gameXX.getHowManyNumbers() ==0) || (customizeGame.gameXX.getNumbersInPool() == 0) );
+
+
         customizeGame.newCustomizeGame();
     }
 
+
 //2. GAME 649
     public void lottoGame649(){
-        Game649.main(null);
+        show("..Welcome to 6/49 Game...");
+
+        CustomizeGame game649 = new CustomizeGame();
+        game649.gameXX.setNumbersInPool(49);
+        game649.gameXX.setHowManyNumbeers(6);
+        game649.xNumbersInPool = game649.gameXX.getNumbersInPool();
+
+        show("You will have numbers in pool: " + game649.gameXX.getNumbersInPool());
+        show("You will have and numbers drawn by computer: " + game649.gameXX.getHowManyNumbers());
+
+        game649.newCustomizeGame();
     }
+
+//    {Game649.main(null);} old IDEA how to play
 
 //3. TABLE_SCORES
     public void tableScores() {
@@ -69,28 +103,13 @@ public class LottoProgram {
         System.out.println("Done");
     }
 
-//******************MENUS******************
+//******************MENU******************
 //MAIN MENU
     public static String menu() {
-        String menu = "1. CUSTOMIZE_GAME\n";
-        menu += "2. GAME649\n";
-        menu += "3. TABLE_SCORES\n";
+        String menu = "1. Customize Game \n";
+        menu += "2. Game 6/49\n";
+        menu += "3. Table Score\n";
         menu += "4. Quit\n";
-
-        menu += "Please make a selection";
-        return menu;
-    }
-
-//customizeGameMenu
-    public static String customizeGameMenu() {
-        String menu = "1. New Game - Computer Numbers\n";
-        menu += "2. New Game - Player Numbers\n";
-        menu += "3. Show Scores - Computer\n";
-        menu += "4. Show Scores - Player\n";
-        menu += "5. Clear Scores - Computer\n";
-        menu += "6. Clear Scores - Player\n";
-        menu += "7. Reset & Quit\n";
-
 
         menu += "Please make a selection";
         return menu;
@@ -106,6 +125,9 @@ public class LottoProgram {
         }
     }
 
+    static void show(String text) {
+        System.out.println(text);
+    }
 
 
 }//END OF CLASS - LottoProgram

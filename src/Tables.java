@@ -15,7 +15,7 @@ public class Tables {
     protected void getDrawnNumbersTable (int xhowManyNumbers) {
         for (int i = 0; i < xhowManyNumbers; i++) {
 
-            if(drawnNumbersTable[0] == 0){
+            if(drawnNumbersTable == null){
                 System.out.println("No Scores!");
                 break;
 
@@ -41,7 +41,7 @@ public class Tables {
     }
 
 
-    protected int setSingleNumberInDrawnNumbersTable (int xhowManyNumbers, int xNumbersInPool){
+    protected int setSingleLineOfNumbersInDrawnNumbersTable (int xhowManyNumbers, int xNumbersInPool){
         for (int i=0; i<xhowManyNumbers;i++){
             System.out.println("You have to set " + xhowManyNumbers + " numbers, from pool of: " + xNumbersInPool);
             System.out.println("This is, number: " + (i+1));

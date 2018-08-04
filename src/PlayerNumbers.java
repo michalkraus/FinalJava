@@ -11,7 +11,6 @@ public class PlayerNumbers {
     Scanner scanner = new Scanner(System.in);
 
 
-
     //getInput only Integer
     public static int getIntInput(Scanner i) {
         try {
