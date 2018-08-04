@@ -7,7 +7,7 @@ public class RandomGenerator {
     protected int howManyNumbers;
 
     protected int randomNumber;
-    Tables randomGeneratorTables = new Tables();
+    protected Tables rgTable = new Tables();
 
     //**//NumbersInPool****************************************
     public int setNumbersInPool(int numbersInPool) {
@@ -26,14 +26,13 @@ public class RandomGenerator {
     public int getHowManyNumbers() {return howManyNumbers;}
 
 
-
 //**//Table Methods**********
     public void getDrawnNumbersTable () {
-        randomGeneratorTables.getDrawnNumbersTable(howManyNumbers);
+        rgTable.getDrawnNumbersTable(howManyNumbers);
     }
 
     public int [] clearDrawnNumbersTable(){
-       return randomGeneratorTables.clearDrawnNumbersTable(howManyNumbers);
+       return rgTable.clearDrawnNumbersTable(howManyNumbers);
     }
 
 
@@ -42,7 +41,7 @@ public class RandomGenerator {
     public RandomGenerator(int numbersInPool, int howManyNumbers){
             this.numbersInPool = numbersInPool;
             this.howManyNumbers = howManyNumbers;
-            this.randomGeneratorTables.drawnNumbersTable = new int[howManyNumbers];
+            this.rgTable.drawnNumbersTable = new int[howManyNumbers];
         }
 
 
@@ -50,11 +49,11 @@ public class RandomGenerator {
 //**//Generator
         public int numberGenerator () {
 
-            randomGeneratorTables.drawnNumbersTable = new int[howManyNumbers]; //New 1D [] Score with howManyNumbers index
+            rgTable.drawnNumbersTable = new int[howManyNumbers]; //New 1D [] Score with howManyNumbers index
             Random random = new Random();//Random() Run
 
             //index starts from 0.. so howManyNumbers-1 is the last index.
-            while (randomGeneratorTables.drawnNumbersTable[howManyNumbers-1] == 0) {
+            while (rgTable.drawnNumbersTable[howManyNumbers-1] == 0) {
 //First Loop
                 if (numbersInPool <= howManyNumbers){
                     System.out.println("You cannot have drawn numbers than is in the pool!");
@@ -64,17 +63,17 @@ public class RandomGenerator {
                     randomNumber = random.nextInt(numbersInPool) + 1;
                     for (int j = 0; j < howManyNumbers; j++) {
 //Second Loop
-                        if (randomGeneratorTables.drawnNumbersTable[j] == randomNumber) {
+                        if (rgTable.drawnNumbersTable[j] == randomNumber) {
                             break;
-                        } else if (randomGeneratorTables.drawnNumbersTable[j] == 0) {
-                            randomGeneratorTables.drawnNumbersTable[j] = randomNumber;
+                        } else if (rgTable.drawnNumbersTable[j] == 0) {
+                            rgTable.drawnNumbersTable[j] = randomNumber;
                             break;
                         }
 
                     }//End of the Second Loop
                 }
             } //End of the First - While LOOP
-            return randomGeneratorTables.drawnNumbersTable[howManyNumbers-1];
+            return rgTable.drawnNumbersTable[howManyNumbers-1];
         }
 
 

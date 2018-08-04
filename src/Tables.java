@@ -10,8 +10,6 @@ public class Tables {
 
     Scanner scanner = new Scanner(System.in);
 
-
-
 //DrawnNumbersTable Function
 
     protected void getDrawnNumbersTable (int xhowManyNumbers) {
@@ -46,7 +44,7 @@ public class Tables {
     protected int setSingleNumberInDrawnNumbersTable (int xhowManyNumbers, int xNumbersInPool){
         for (int i=0; i<xhowManyNumbers;i++){
             System.out.println("You have to set " + xhowManyNumbers + " numbers, from pool of: " + xNumbersInPool);
-            System.out.println("This is, number: " + i+1);
+            System.out.println("This is, number: " + (i+1));
             drawnNumbersTable[i]=scanner.nextInt();
         }
         return drawnNumbersTable[xhowManyNumbers-1];
