@@ -37,6 +37,12 @@ public class Tables {
     }
 
 
+    protected int[] sortDrawnNumbersTable () {
+        this.drawnNumbersTable = Arrays.stream(this.drawnNumbersTable).sorted().toArray();
+        return this.drawnNumbersTable;
+    }
+
+
     protected int[] setNewDrawnNumbersTable (int x) {
         this.drawnNumbersTable = new int[x];
         return this.drawnNumbersTable;
@@ -78,6 +84,7 @@ public class Tables {
         rowTable.add(index, x);
         rowTable.get(index);
         setDrawnNumbersTable(rowTable.get(index));
+        //sortDrawnNumbersTable ();
         System.out.print("Index: " + index + ": "); getDrawnNumbersTable(drawnNumbersTable.length);
     }
 

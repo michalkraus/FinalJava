@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PlayerNumbers {
@@ -98,6 +99,7 @@ public class PlayerNumbers {
 
                 }
             } //End of the First - While LOOP
+            Arrays.sort(plTable.drawnNumbersTable); //sorting of the table up^^.
             return plTable.drawnNumbersTable[howManyNumbers-1];
         }
 

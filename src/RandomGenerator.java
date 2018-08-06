@@ -75,6 +75,7 @@ public class RandomGenerator {
                     }//End of the Second Loop
                 }
             } //End of the First - While LOOP
+            Arrays.sort(rgTable.drawnNumbersTable); //sorting of the table up^^.
             return rgTable.drawnNumbersTable[howManyNumbers-1];
         }
 
