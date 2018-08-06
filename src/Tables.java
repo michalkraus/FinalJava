@@ -20,8 +20,9 @@ public class Tables {
                 break;
 
             } else
-            System.out.println(drawnNumbersTable[i]);
+            System.out.print(drawnNumbersTable[i] + ", ");
         }
+        System.out.println("");
     }
 
 
@@ -82,6 +83,18 @@ public class Tables {
             return (rowTable.get(index));
         }
     }
+
+    public int checkIndex() {
+        return rowTable.size();
+    }
+
+    public void showNumbersFromAllLines (int xhowManyNumbers) {
+        for (int i=0; i<rowTable.size();i++){
+            System.out.print("Line index " + i + " ");
+            getDrawnNumbersTable(xhowManyNumbers);
+        }
+    }
+
 
     //ArrayList.CLEAR function
     public void clear () {

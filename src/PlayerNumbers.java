@@ -44,8 +44,8 @@ public class PlayerNumbers {
 
 
     //**//Table Methods**********
-    public void getDrawnNumbersTable () {
-        plTable.getDrawnNumbersTable(howManyNumbers);
+    public void getDrawnNumbersTable (int tableLength ) {
+        plTable.getDrawnNumbersTable(tableLength);
     }
 
     public int [] clearDrawnNumbersTable(){
@@ -78,7 +78,7 @@ public class PlayerNumbers {
                     break;
                 }
                 else {
-                    System.out.println("Type your number:" + (counter+1));
+                    System.out.print("Type your " + (counter+1) + " number:  ");
                     yourNumber = getIntInput(scanner);
                     for (int j = 0; j < howManyNumbers; j++) {
 //Second Loop

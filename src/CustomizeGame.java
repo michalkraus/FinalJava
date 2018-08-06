@@ -1,7 +1,8 @@
+//Customize GAME
 import java.util.Scanner;
 
-//Customize GAME:
 public class CustomizeGame  {
+
     //Attributes
     Scanner scanner = new Scanner(System.in);
     Scanner scannerStr = new Scanner(System.in);
@@ -11,10 +12,9 @@ public class CustomizeGame  {
 
     int indexComputer = 0;
     int indexPlayer = 0;
+
     int [] lineTableComputer; //row table to display numbers from ArrayList
     int [] lineTablePlayer; //row table to display numbers from ArrayList
-
-
     Tables computerTable = new Tables();
     Tables playerTable = new Tables();
 
@@ -72,43 +72,34 @@ public class CustomizeGame  {
                         playerTable.add(indexPlayer, playerNumbers.plTable.drawnNumbersTable);
                         indexPlayer++;
 
-                        show("Your Numbers are saved under index: " + i);
+                        show("Your Numbers are saved under index: " + indexPlayer);
+                        br();
                     }
-
+                    System.out.println("Thanks, done: " + howManyTimesPlayerPlay + " lotteries.\n");
 
                     break;
 
                 case 3: //Show Scores - Computer
-                    System.out.println("Show Scores - Computer");
+                    showScoresComputer();
 
-                    System.out.println("Lottery with index 0");
-                    computerTable.get(0);
-                    lineTableComputer = computerTable.get(0);
-                    gameXX.rgTable.setDrawnNumbersTable(lineTableComputer);
-                    gameXX.getDrawnNumbersTable();
-
+                    br();
                     break;
 
                 case 4: //Show Scores - Player
-                    System.out.println("Show Scores - Player");
+                    showScoresPlayer();
 
-                    System.out.println("Lottery with index 0");
-                    playerTable.get(0);
-                    lineTablePlayer = playerTable.get(0);
-                    playerNumbers.plTable.setDrawnNumbersTable(lineTablePlayer);
-                    playerNumbers.getDrawnNumbersTable();
-
+                    br();
                     break;
-
 
                 case 5: //Clear Scores - Computer
                     System.out.println("Clear Scores - Computer");
-                    clearScores ();
+                    clearScoresComputer ();
 
                     break;
 
                 case 6: //Clear Scores - Player
                     System.out.println("Clear Scores - Player");
+                    clearScoresPlayer ();
 
                     break;
 
@@ -124,46 +115,7 @@ public class CustomizeGame  {
         } while (userChoiceCustomizeGame != 7);
 
     }
-
-
-
-
-
-
-//Method to ClearScores
-    public int clearScores () {
-        System.out.println("Do you want to wipe the previous scores? Y/N");
-        String yesNo = scannerStr.next();
-        System.out.println(yesNo);
-
-        if((yesNo.equals("Y") || yesNo.equals("y") || yesNo.equals("Yes") || yesNo.equals("yes"))){
-            System.out.println("Wiped!");
-            computerTable.clear();
-            gameXX.rgTable.clearDrawnNumbersTable(gameXX.howManyNumbers);
-            //gameXX.randomGeneratorTables.setSingleDrawnNumbersTable();
-            return indexComputer = 0;
-        }
-        else {
-            System.out.println("Nothing changed.");
-            return 0;
-        }
-    }
-
-/**************************************************************/
-    // Method to SHOW text System.out.println() and br() is \n, and getInput only integers.
-    static void show(String text) {
-        System.out.println(text);
-    }
-
-    static void br () {
-        System.out.println("\n");
-    }
-
-    static String empty () {
-        return "";
-    }
-
-
+/***********************Methods********************************/
     //getInput only Integer
     public static int getIntInput(Scanner i) {
         try {
@@ -188,6 +140,96 @@ public class CustomizeGame  {
         menu += "Please make a selection";
         return menu;
     }
+
+/**************************************************************/
+    // Method to SHOW text System.out.println() and br() is \n, and getInput only integers.
+    static void show(String text) {
+        System.out.println(text);
+    }
+
+    static void br () {
+        System.out.println("\n");
+    }
+
+    static String empty () {
+        return "";
+    }
+
+
+
+/************Scores Methods*****************************/
+//Method to ClearScoresComputer
+public int clearScoresComputer () {
+    System.out.println("Do you want to wipe the previous scores? Y/N");
+    String yesNo = scannerStr.next();
+    System.out.println(yesNo);
+
+    if((yesNo.equals("Y") || yesNo.equals("y") || yesNo.equals("Yes") || yesNo.equals("yes"))){
+        System.out.println("Wiped!");
+        computerTable.clear();
+        gameXX.rgTable.clearDrawnNumbersTable(gameXX.howManyNumbers);
+        //gameXX.randomGeneratorTables.setSingleDrawnNumbersTable();
+        return indexComputer = 0;
+    }
+    else {
+        System.out.println("Nothing changed.");
+        return 0;
+    }
+}
+
+//Method to ClearScoresPlayer
+    public int clearScoresPlayer () {
+        System.out.println("Do you want to wipe the previous scores? Y/N");
+        String yesNo = scannerStr.next();
+        System.out.println(yesNo);
+
+        if((yesNo.equals("Y") || yesNo.equals("y") || yesNo.equals("Yes") || yesNo.equals("yes"))){
+            System.out.println("Wiped!");
+            playerTable.clear();
+            playerNumbers.plTable.clearDrawnNumbersTable(playerNumbers.howManyNumbers);
+            //gameXX.randomGeneratorTables.setSingleDrawnNumbersTable();
+            return indexPlayer = 0;
+        }
+        else {
+            System.out.println("Nothing changed.");
+            return 0;
+        }
+    }
+
+//showScores - computer
+    public void showScoresComputer(){
+        System.out.println("Show Scores - Computer");
+        show("Computer has " + computerTable.checkIndex() + " lines with numbers");
+
+        for (int i=0; i<computerTable.checkIndex();i++){
+            System.out.print("Index " + i + " numbers: ");
+            computerTable.get(i);
+            lineTableComputer = computerTable.get(i);
+            gameXX.rgTable.setDrawnNumbersTable(lineTableComputer);
+            gameXX.getDrawnNumbersTable();
+        }
+    }
+//showScores - player
+    public void showScoresPlayer(){
+        System.out.println("Show Scores - Player");
+        br();
+        show("You have " + playerTable.checkIndex() + " lines with numbers");
+        br();
+        for (int i=0; i<playerTable.checkIndex();i++){
+            System.out.print("Index " + i + " numbers: ");
+            playerTable.get(i);
+            lineTablePlayer = playerTable.get(i);
+            playerNumbers.plTable.setDrawnNumbersTable(lineTablePlayer);
+            playerNumbers.getDrawnNumbersTable(lineTablePlayer.length);
+        }
+
+    }
+
+
+
+
+
+
 
 
 }//End of the Class
