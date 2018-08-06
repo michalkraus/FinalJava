@@ -52,7 +52,7 @@ public class RandomGenerator {
         public int numberGenerator () {
 
             rgTable.drawnNumbersTable = new int[howManyNumbers]; //New 1D [] Score with howManyNumbers index
-            Random random = new Random();//Random() Run
+            Random random = new Random();//Random()
 
             //index starts from 0.. so howManyNumbers-1 is the last index.
             while (rgTable.drawnNumbersTable[howManyNumbers-1] == 0) {

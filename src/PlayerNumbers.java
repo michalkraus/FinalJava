@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class PlayerNumbers {
@@ -104,10 +105,43 @@ public class PlayerNumbers {
         }
 
 
+    //**//quickPick
+    public int quickPick () {
 
-        public String toString () {
+        plTable.drawnNumbersTable = new int[howManyNumbers];//New 1D [] Score with howManyNumbers index
+        Random randomPlayer = new Random();//Random()
+
+        //index starts from 0.. so howManyNumbers-1 is the last index.
+        while (plTable.drawnNumbersTable[howManyNumbers-1] == 0) {
+//First Loop
+            if (numbersInPool <= howManyNumbers){
+                System.out.println("You have much more numbers to be drawn, than is in the pool.");
+                break;
+            }
+            else {
+                yourNumber = randomPlayer.nextInt(numbersInPool) + 1;
+                for (int j = 0; j < howManyNumbers; j++) {
+//Second Loop
+                    if (plTable.drawnNumbersTable[j] == yourNumber) {
+                        break;
+                    } else if (plTable.drawnNumbersTable[j] == 0) {
+                        plTable.drawnNumbersTable[j] = yourNumber;
+                        break;
+                    }
+                }//End of the Second Loop
+            }
+        } //End of the First - While LOOP
+        Arrays.sort(plTable.drawnNumbersTable); //sorting of the table up^^.
+        return plTable.drawnNumbersTable[howManyNumbers-1];
+    }
+
+
+
+    public String toString () {
             return "";
         }
 
 
-}
+
+
+}//End of Class

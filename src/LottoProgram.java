@@ -109,7 +109,7 @@ public class LottoProgram {
         String menu = "1. Customize Game \n";
         menu += "2. Game 6/49\n";
         menu += "3. Table Score\n";
-        menu += "0. Quit\n";
+        menu += "\n0. Quit\n";
 
         menu += "Please make a selection";
         return menu;

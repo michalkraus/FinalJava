@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ebba230-844a-4b77-af26-e9da804eedcc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ArrayDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/Game649.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/HelpStaticVoid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/Read.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/ScoreTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/Tables.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalJava/Tables.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/Tests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/help.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NonUsed/Game649.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NonUsed/Game649.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomizeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomizeGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LottoProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LottoProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlayerNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tables.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,20 +26,24 @@
       <file leaf-file-name="LottoProgram.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LottoProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="1489">
+              <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomizeGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomizeGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-440">
-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="399">
+              <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
               <folding>
-                <element signature="e#4871#4872#0" expanded="true" />
-                <element signature="e#4911#4912#0" expanded="true" />
+                <element signature="e#5440#5441#0" expanded="true" />
+                <element signature="e#5480#5481#0" expanded="true" />
+                <element signature="e#5505#5506#0" expanded="true" />
+                <element signature="e#5545#5546#0" expanded="true" />
+                <element signature="e#5575#5576#0" expanded="true" />
+                <element signature="e#5600#5601#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,7 +52,7 @@
       <file leaf-file-name="Tables.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1595">
+            <state relative-caret-position="797">
               <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -73,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerNumbers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerNumbers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayerNumbers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="93" column="38" lean-forward="true" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+            <state relative-caret-position="2442">
+              <caret line="115" column="12" lean-forward="true" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1196#1197#0" expanded="true" />
@@ -90,8 +85,8 @@
       <file leaf-file-name="RandomGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RandomGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="77" column="15" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="80" />
+            <state relative-caret-position="344">
+              <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -131,14 +126,14 @@
         <option value="$PROJECT_DIR$/src/ShowScoresInterface.java" />
         <option value="$PROJECT_DIR$/src/Tests.java" />
         <option value="$PROJECT_DIR$/src/ShowScores.java" />
-        <option value="$PROJECT_DIR$/src/LottoProgram.java" />
-        <option value="$PROJECT_DIR$/src/CustomizeGame.java" />
         <option value="$PROJECT_DIR$/src/NonUsed/Game649.java" />
         <option value="$PROJECT_DIR$/src/NonUsed/ArrayDemo.java" />
         <option value="$PROJECT_DIR$/src/ArrayDemo.java" />
         <option value="$PROJECT_DIR$/src/Tables.java" />
+        <option value="$PROJECT_DIR$/src/LottoProgram.java" />
         <option value="$PROJECT_DIR$/src/RandomGenerator.java" />
         <option value="$PROJECT_DIR$/src/PlayerNumbers.java" />
+        <option value="$PROJECT_DIR$/src/CustomizeGame.java" />
       </list>
     </option>
   </component>
@@ -318,7 +313,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.39366272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15252417" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23222223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -709,20 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2433" selection-start-line="2433" selection-end-line="2433" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LottoProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NonUsed/Game649.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -754,27 +735,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#4871#4872#0" expanded="true" />
-            <element signature="e#4911#4912#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="22">
+          <caret line="2433" selection-start-line="2433" selection-end-line="2433" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RandomGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="77" column="15" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="80" />
+        <state relative-caret-position="344">
+          <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tables.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1595">
+        <state relative-caret-position="797">
           <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -791,12 +768,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayerNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="93" column="38" lean-forward="true" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+        <state relative-caret-position="2442">
+          <caret line="115" column="12" lean-forward="true" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1196#1197#0" expanded="true" />
             <element signature="e#1256#1257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LottoProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1489">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+          <folding>
+            <element signature="e#5440#5441#0" expanded="true" />
+            <element signature="e#5480#5481#0" expanded="true" />
+            <element signature="e#5505#5506#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
+            <element signature="e#5575#5576#0" expanded="true" />
+            <element signature="e#5600#5601#0" expanded="true" />
           </folding>
         </state>
       </provider>

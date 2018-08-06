@@ -54,6 +54,7 @@ public class CustomizeGame  {
                     break;
 
                 case 2: //New Game - Player Numbers
+                    String quickPickStr;
                     System.out.println("Player Table");
 
                     int howManyTimesPlayerPlay; //attribute How Many Times To Generate Numbers
@@ -65,17 +66,37 @@ public class CustomizeGame  {
                     System.out.println("How Many times would you like to play?");
                     howManyTimesPlayerPlay = getIntInput(scanner);
 
-                    for(int i=0; i < howManyTimesPlayerPlay; i++){
+                    System.out.println("Quick Pick? Yes(y)/No");
+                    quickPickStr = scannerStr.next();
 
-                        playerNumbers.typeYourNumbers();
-                        playerTable.add(indexPlayer, playerNumbers.plTable.drawnNumbersTable);
+                    if((quickPickStr.equals("Y") || quickPickStr.equals("y") || quickPickStr.equals("Yes") || quickPickStr.equals("yes"))){
+                        for (int i = 0; i < howManyTimesPlayerPlay; i++) {
 
-                        show("Your Numbers are saved under index: " + indexPlayer);
-                        br();
+                            playerNumbers.quickPick();
+                            playerTable.add(indexPlayer, playerNumbers.plTable.drawnNumbersTable);
 
-                        indexPlayer++;
+//                            show("Your Numbers are saved under index: " + indexPlayer);
+//                            br();
+
+                            indexPlayer++;
+                        }
+                        System.out.println("Thanks, done: " + howManyTimesPlayerPlay + " lotteries.\n");
                     }
-                    System.out.println("Thanks, done: " + howManyTimesPlayerPlay + " lotteries.\n");
+
+                    else {
+                        show("...Please type your numbers...");
+                        for (int i = 0; i < howManyTimesPlayerPlay; i++) {
+
+                            playerNumbers.typeYourNumbers();
+                            playerTable.add(indexPlayer, playerNumbers.plTable.drawnNumbersTable);
+
+//                            show("Your Numbers are saved under index: " + indexPlayer);
+//                            br();
+
+                            indexPlayer++;
+                        }
+                        System.out.println("Thanks, done: " + howManyTimesPlayerPlay + " lotteries.\n");
+                    }
 
                     break;
 
@@ -103,6 +124,11 @@ public class CustomizeGame  {
 
                     break;
 
+                case 9: //...Statistics...
+                    System.out.println("...Statistics...");
+
+                    break;
+
                 case 0: //Reset & Quit
 
                     break;
@@ -126,15 +152,19 @@ public class CustomizeGame  {
         }
     }
 
+
     //customizeGameMenu
     public static String customizeGameMenu() {
-        String menu = "1. New Game - Computer Numbers\n";
-        menu += "2. New Game - Player Numbers\n";
+        String menu = "1. New Game/Add Numbers - Computer Numbers\n";
+        menu += "2. New Game/Add Numbers - Player Numbers\n";
         menu += "3. Show Scores - Computer\n";
         menu += "4. Show Scores - Player\n";
         menu += "5. Clear Scores - Computer\n";
         menu += "6. Clear Scores - Player\n";
-        menu += "0. Reset & Quit\n";
+//        menu += "7. Clear Scores - Player\n";
+//        menu += "8. Clear Scores - Player\n";
+        menu += "9. ...Statistics...\n";
+        menu += "\n0. Reset & Quit\n";
 
 
         menu += "Please make a selection";
