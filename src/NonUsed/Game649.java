@@ -1,4 +1,4 @@
-import java.util.*;
+package NonUsed;
 
 public class Game649 {
 

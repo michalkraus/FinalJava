@@ -1,3 +1,5 @@
+package NonUsed;
+
 public class HelpStaticVoid {
 
         //Tu sie zaczyna Main method

@@ -1,4 +1,4 @@
-//READ command initialize Scanner of INT
+package NonUsed;//READ command initialize Scanner of INT
 import java.util.Scanner;
 
 public class Read {
