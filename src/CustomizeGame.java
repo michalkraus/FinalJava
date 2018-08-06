@@ -68,12 +68,12 @@ public class CustomizeGame  {
                     for(int i=0; i < howManyTimesPlayerPlay; i++){
 
                         playerNumbers.typeYourNumbers();
-
                         playerTable.add(indexPlayer, playerNumbers.plTable.drawnNumbersTable);
-                        indexPlayer++;
 
                         show("Your Numbers are saved under index: " + indexPlayer);
                         br();
+
+                        indexPlayer++;
                     }
                     System.out.println("Thanks, done: " + howManyTimesPlayerPlay + " lotteries.\n");
 
@@ -103,7 +103,7 @@ public class CustomizeGame  {
 
                     break;
 
-                case 7: //Reset & Quit
+                case 0: //Reset & Quit
 
                     break;
 
@@ -112,7 +112,7 @@ public class CustomizeGame  {
 
             }
 
-        } while (userChoiceCustomizeGame != 7);
+        } while (userChoiceCustomizeGame != 0);
 
     }
 /***********************Methods********************************/
@@ -134,7 +134,7 @@ public class CustomizeGame  {
         menu += "4. Show Scores - Player\n";
         menu += "5. Clear Scores - Computer\n";
         menu += "6. Clear Scores - Player\n";
-        menu += "7. Reset & Quit\n";
+        menu += "0. Reset & Quit\n";
 
 
         menu += "Please make a selection";
@@ -168,7 +168,6 @@ public int clearScoresComputer () {
         System.out.println("Wiped!");
         computerTable.clear();
         gameXX.rgTable.clearDrawnNumbersTable(gameXX.howManyNumbers);
-        //gameXX.randomGeneratorTables.setSingleDrawnNumbersTable();
         return indexComputer = 0;
     }
     else {
@@ -187,15 +186,15 @@ public int clearScoresComputer () {
             System.out.println("Wiped!");
             playerTable.clear();
             playerNumbers.plTable.clearDrawnNumbersTable(playerNumbers.howManyNumbers);
-            //gameXX.randomGeneratorTables.setSingleDrawnNumbersTable();
             return indexPlayer = 0;
         }
         else {
-            System.out.println("Nothing changed.");
+            System.out.println("Nothing has changed.");
             return 0;
         }
     }
 
+/***************ShowScores Methods PC-Player***************/
 //showScores - computer
     public void showScoresComputer(){
         System.out.println("Show Scores - Computer");
@@ -212,9 +211,8 @@ public int clearScoresComputer () {
 //showScores - player
     public void showScoresPlayer(){
         System.out.println("Show Scores - Player");
-        br();
         show("You have " + playerTable.checkIndex() + " lines with numbers");
-        br();
+
         for (int i=0; i<playerTable.checkIndex();i++){
             System.out.print("Index " + i + " numbers: ");
             playerTable.get(i);

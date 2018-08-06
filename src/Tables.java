@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class Tables {
 
-    //Attribute
+//Attribute
+
     protected ArrayList<int[]> rowTable = new ArrayList<int[]>();
     protected int [] drawnNumbersTable;
 
     Scanner scanner = new Scanner(System.in);
+
 
 //DrawnNumbersTable Function
 
@@ -20,7 +22,10 @@ public class Tables {
                 break;
 
             } else
-            System.out.print(drawnNumbersTable[i] + ", ");
+                if (drawnNumbersTable[i]>=10){
+                    System.out.print(drawnNumbersTable[i] + ", ");
+                }
+                else System.out.print(" " + drawnNumbersTable[i] + ", ");
         }
         System.out.println("");
     }
@@ -30,6 +35,7 @@ public class Tables {
         this.drawnNumbersTable = drawnNumbersTable;
         return drawnNumbersTable;
     }
+
 
     protected int[] setNewDrawnNumbersTable (int x) {
         this.drawnNumbersTable = new int[x];
@@ -42,6 +48,19 @@ public class Tables {
     }
 
 
+    protected int [] clearDrawnNumbersTable (int xHowManyNumbers){
+        return drawnNumbersTable = new int [xHowManyNumbers];
+    }
+
+
+    protected void showNumbersFromAllLines (int xhowManyNumbers) {
+        for (int i=0; i<rowTable.size();i++){
+            System.out.print("Line index " + i + " ");
+            getDrawnNumbersTable(xhowManyNumbers);
+        }
+    }
+
+
     protected int setSingleLineOfNumbersInDrawnNumbersTable (int xhowManyNumbers, int xNumbersInPool){
         for (int i=0; i<xhowManyNumbers;i++){
             System.out.println("You have to set " + xhowManyNumbers + " numbers, from pool of: " + xNumbersInPool);
@@ -49,15 +68,7 @@ public class Tables {
             drawnNumbersTable[i]=scanner.nextInt();
         }
         return drawnNumbersTable[xhowManyNumbers-1];
-
     }
-
-
-    protected int [] clearDrawnNumbersTable (int xHowManyNumbers){
-        return drawnNumbersTable = new int [xHowManyNumbers];
-    }
-
-
 
 
 //ArrayList Functions:
@@ -65,10 +76,12 @@ public class Tables {
     //ArrayList.ADD function
     public void add (int index, int[] x) {
         rowTable.add(index, x);
-        System.out.println("Index: " + index + " " + rowTable.get(index));
+        rowTable.get(index);
+        setDrawnNumbersTable(rowTable.get(index));
+        System.out.print("Index: " + index + ": "); getDrawnNumbersTable(drawnNumbersTable.length);
     }
 
-    //ArrayList.GET function
+//ArrayList.GET function
     public int[] get (int index) {
         if (rowTable.isEmpty()) {
             System.out.println("No Scores yet! (scoreTable.isEmpty");
@@ -83,20 +96,12 @@ public class Tables {
             return (rowTable.get(index));
         }
     }
-
+//ArrayList.SIZE - checkIndex function
     public int checkIndex() {
         return rowTable.size();
     }
 
-    public void showNumbersFromAllLines (int xhowManyNumbers) {
-        for (int i=0; i<rowTable.size();i++){
-            System.out.print("Line index " + i + " ");
-            getDrawnNumbersTable(xhowManyNumbers);
-        }
-    }
-
-
-    //ArrayList.CLEAR function
+//ArrayList.CLEAR function
     public void clear () {
         this.rowTable.removeAll(rowTable);
     }
@@ -104,18 +109,5 @@ public class Tables {
 
 
 
-
-
-    //getInput only Integer - Menu
-//    public static int getIntInput(Scanner i) {
-//        try {
-//            return (Integer.parseInt(i.nextLine()));
-//        } catch (NumberFormatException e) {
-//            System.out.println("It has to be Integer(Number)");
-//            return getIntInput(i);
-//
-//        }
-//    }
-//
 
 }//End of Table Class

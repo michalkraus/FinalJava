@@ -7,13 +7,10 @@
     <list default="true" id="3ebba230-844a-4b77-af26-e9da804eedcc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FinalJava/CustomizeGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalJava/CustomizeGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/ShowScores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/ShowScoresInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalJava/LottoProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalJava/LottoProgram.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FinalJava/Tables.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalJava/Tables.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomizeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomizeGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayerNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShowScores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShowScoresInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LottoProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LottoProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tables.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="LottoProgram.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LottoProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="114" column="20" lean-forward="true" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+            <state relative-caret-position="594">
+              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -41,8 +38,8 @@
       <file leaf-file-name="CustomizeGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="71" column="69" lean-forward="true" selection-start-line="71" selection-start-column="69" selection-end-line="71" selection-end-column="69" />
+            <state relative-caret-position="379">
+              <caret line="217" column="31" lean-forward="true" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
               <folding>
                 <element signature="e#4871#4872#0" expanded="true" />
                 <element signature="e#4911#4912#0" expanded="true" />
@@ -67,14 +64,17 @@
       <file leaf-file-name="Tables.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="-1155">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2370#2371#0" expanded="true" />
-                <element signature="e#2408#2409#0" expanded="true" />
-                <element signature="e#2698#2699#0" expanded="true" />
-                <element signature="e#2747#2748#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
+                <element signature="e#2685#2686#0" expanded="true" />
+                <element signature="e#2723#2724#0" expanded="true" />
+                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2827#2828#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +83,8 @@
       <file leaf-file-name="RandomGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RandomGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+            <state relative-caret-position="632">
+              <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -100,7 +100,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Lottery with index</find>
+      <find />
       <find>gamexx</find>
     </findStrings>
   </component>
@@ -120,19 +120,19 @@
         <option value="$PROJECT_DIR$/src/CopyOfRandomGenerator.java" />
         <option value="$PROJECT_DIR$/src/Archive.java" />
         <option value="$PROJECT_DIR$/src/Game649.java" />
-        <option value="$PROJECT_DIR$/src/RandomGenerator.java" />
-        <option value="$PROJECT_DIR$/src/LottoProgram.java" />
         <option value="$PROJECT_DIR$/src/ScoreTable.java" />
         <option value="$PROJECT_DIR$/src/ShowScoresInterface.java" />
         <option value="$PROJECT_DIR$/src/Tests.java" />
         <option value="$PROJECT_DIR$/src/ShowScores.java" />
-        <option value="$PROJECT_DIR$/src/Tables.java" />
         <option value="$PROJECT_DIR$/src/PlayerNumbers.java" />
+        <option value="$PROJECT_DIR$/src/LottoProgram.java" />
+        <option value="$PROJECT_DIR$/src/RandomGenerator.java" />
+        <option value="$PROJECT_DIR$/src/Tables.java" />
         <option value="$PROJECT_DIR$/src/CustomizeGame.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -289,13 +289,13 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33555555" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33555555" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32975295" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18743287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18743287" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23222223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -368,10 +368,13 @@
           <caret line="41" column="43" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2370#2371#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2698#2699#0" expanded="true" />
-            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
+            <element signature="e#2685#2686#0" expanded="true" />
+            <element signature="e#2723#2724#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -723,22 +726,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LottoProgram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="114" column="20" lean-forward="true" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+        <state relative-caret-position="594">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tables.java">
+    <entry file="file://$PROJECT_DIR$/src/RandomGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2370#2371#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2698#2699#0" expanded="true" />
-            <element signature="e#2747#2748#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="632">
+          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -753,17 +749,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RandomGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/Tables.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        <state relative-caret-position="-1155">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
+            <element signature="e#2685#2686#0" expanded="true" />
+            <element signature="e#2723#2724#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="71" column="69" lean-forward="true" selection-start-line="71" selection-start-column="69" selection-end-line="71" selection-end-column="69" />
+        <state relative-caret-position="379">
+          <caret line="217" column="31" lean-forward="true" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
           <folding>
             <element signature="e#4871#4872#0" expanded="true" />
             <element signature="e#4911#4912#0" expanded="true" />

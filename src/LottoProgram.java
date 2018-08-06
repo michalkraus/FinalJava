@@ -5,7 +5,7 @@ public class LottoProgram {
     private final static int CUSTOMIZE_GAME = 1;
     private final static int GAME649 = 2;
     private final static int TABLE_SCORES = 3;
-    private final static int QUIT = 4;
+    private final static int QUIT = 0;
 
     Scanner scanner = new Scanner(System.in);
     protected int userChoice;
@@ -45,7 +45,7 @@ public class LottoProgram {
                 default:
                     System.out.println("Wrong Choice.\nPlease try again.");
             }
-        } while (userChoice != 4);
+        } while (userChoice != 0);
     }
 
 
@@ -109,7 +109,7 @@ public class LottoProgram {
         String menu = "1. Customize Game \n";
         menu += "2. Game 6/49\n";
         menu += "3. Table Score\n";
-        menu += "4. Quit\n";
+        menu += "0. Quit\n";
 
         menu += "Please make a selection";
         return menu;
