@@ -93,16 +93,20 @@ public class Tables {
         if (rowTable.isEmpty()) {
             System.out.println("No Scores yet! (scoreTable.isEmpty");
             return null;
-        }
-        else if (rowTable == null){
+        } else if (rowTable == null) {
             System.out.println("No Scores yet! (scoreTable == null)");
             return null;
-        }
-        else {
+        } else {
             rowTable.get(index);
             return (rowTable.get(index));
         }
     }
+
+//ArrayList.REMOVE - function
+        public void remove(int removeIndex) {
+            rowTable.remove(removeIndex);
+        }
+
 //ArrayList.SIZE - checkIndex function
     public int checkIndex() {
         return rowTable.size();

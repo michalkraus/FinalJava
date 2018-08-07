@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ebba230-844a-4b77-af26-e9da804eedcc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/CustomizeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomizeGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LottoProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LottoProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayerNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tables.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +32,8 @@
       <file leaf-file-name="CustomizeGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+            <state relative-caret-position="209">
+              <caret line="239" column="5" lean-forward="true" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
               <folding>
                 <element signature="e#5440#5441#0" expanded="true" />
                 <element signature="e#5480#5481#0" expanded="true" />
@@ -52,13 +49,15 @@
       <file leaf-file-name="Tables.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="797">
-              <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+            <state relative-caret-position="247">
+              <caret line="105" column="35" lean-forward="true" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1087#1088#0" expanded="true" />
                 <element signature="e#1134#1135#0" expanded="true" />
                 <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
+                <element signature="e#3111#3112#0" expanded="true" />
+                <element signature="e#3170#3171#0" expanded="true" />
                 <element signature="e#2685#2686#0" expanded="true" />
                 <element signature="e#2723#2724#0" expanded="true" />
                 <element signature="e#2778#2779#0" expanded="true" />
@@ -91,6 +90,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="help.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NonUsed/help.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="159" column="43" lean-forward="true" selection-start-line="159" selection-start-column="43" selection-end-line="159" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -102,7 +110,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
+      <find>Lottery with index</find>
       <find>gamexx</find>
     </findStrings>
   </component>
@@ -129,15 +137,16 @@
         <option value="$PROJECT_DIR$/src/NonUsed/Game649.java" />
         <option value="$PROJECT_DIR$/src/NonUsed/ArrayDemo.java" />
         <option value="$PROJECT_DIR$/src/ArrayDemo.java" />
-        <option value="$PROJECT_DIR$/src/Tables.java" />
         <option value="$PROJECT_DIR$/src/LottoProgram.java" />
         <option value="$PROJECT_DIR$/src/RandomGenerator.java" />
         <option value="$PROJECT_DIR$/src/PlayerNumbers.java" />
         <option value="$PROJECT_DIR$/src/CustomizeGame.java" />
+        <option value="$PROJECT_DIR$/src/NonUsed/help.java" />
+        <option value="$PROJECT_DIR$/src/Tables.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
@@ -160,6 +169,12 @@
               <item name="FinalJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinalJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="NonUsed" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,7 +312,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -382,6 +396,8 @@
             <element signature="e#1087#1088#0" expanded="true" />
             <element signature="e#1134#1135#0" expanded="true" />
             <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#3170#3171#0" expanded="true" />
             <element signature="e#2685#2686#0" expanded="true" />
             <element signature="e#2723#2724#0" expanded="true" />
             <element signature="e#2778#2779#0" expanded="true" />
@@ -728,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NonUsed/help.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -746,23 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
-            <element signature="e#2685#2686#0" expanded="true" />
-            <element signature="e#2723#2724#0" expanded="true" />
-            <element signature="e#2778#2779#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,10 +777,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/NonUsed/help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="159" column="43" lean-forward="true" selection-start-line="159" selection-start-column="43" selection-end-line="159" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="105" column="35" lean-forward="true" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="method#setSingleLineOfNumbersInDrawnNumbersTable#0;class#Tables#0" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#2685#2686#0" expanded="true" />
+            <element signature="e#2723#2724#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CustomizeGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+        <state relative-caret-position="209">
+          <caret line="239" column="5" lean-forward="true" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
           <folding>
             <element signature="e#5440#5441#0" expanded="true" />
             <element signature="e#5480#5481#0" expanded="true" />
