@@ -20,6 +20,7 @@ public class CustomizeGame  {
 
     protected RandomGenerator gameXX = new RandomGenerator(xNumbersInPool,xHowManyNumbers);
     protected PlayerNumbers playerNumbers = new PlayerNumbers(xNumbersInPool,xHowManyNumbers);
+    protected Probability probability = new Probability(xNumbersInPool,xHowManyNumbers);
 
     public void newCustomizeGame() {
 
@@ -103,13 +104,13 @@ public class CustomizeGame  {
                 case 3: //Show Scores - Computer
                     showScoresComputer();
 
-                    br();
+                    br();br();
                     break;
 
                 case 4: //Show Scores - Player
                     showScoresPlayer();
 
-                    br();
+                    br();br();
                     break;
 
                 case 5: //Clear Scores - Computer
@@ -126,6 +127,29 @@ public class CustomizeGame  {
 
                 case 9: //...Statistics...
                     System.out.println("...Statistics...");
+                    probability.setHowManyNumbeers(gameXX.getHowManyNumbers());
+                    probability.setNumbersInPool(gameXX.getNumbersInPool());
+
+                    probability.factorialCalculator();
+//
+//                    show("For Computer Index0 and Player Index0");
+//                    computerTable.get(0);
+//                    lineTableComputer = computerTable.get(0);
+//                    //gameXX.rgTable.setDrawnNumbersTable(computerTable.get(0));
+//                    //gameXX.getDrawnNumbersTable();
+//
+//                    playerTable.get(0);
+//                    lineTablePlayer = playerTable.get(0);
+//                    //playerNumbers.plTable.setDrawnNumbersTable(playerTable.get(0));
+//                    //playerNumbers.getDrawnNumbersTable(playerTable.get(0).length);
+//
+//                    winnerChecker(lineTableComputer, lineTablePlayer);
+//
+//                    br();br();
+                    show("This is the correct function");
+
+                    statisticWinnerChecker();
+
 
                     break;
 
@@ -155,6 +179,7 @@ public class CustomizeGame  {
 
     //customizeGameMenu
     public static String customizeGameMenu() {
+        br();
         String menu = "1. New Game/Add Numbers - Computer Numbers\n";
         menu += "2. New Game/Add Numbers - Player Numbers\n";
         menu += "3. Show Scores - Computer\n";
@@ -178,7 +203,7 @@ public class CustomizeGame  {
     }
 
     static void br () {
-        System.out.println("\n");
+        System.out.print("\n");
     }
 
     static String empty () {
@@ -254,8 +279,43 @@ public int clearScoresComputer () {
     }
 
 
+/***************Statistics***************/
+//winnerChecker
+    public static void winnerChecker(int[] pcScoChecker, int[] plScoChecker){
 
+        int winnerCounter;
 
+        winnerCounter=0;
+        System.out.print("Theses numbers win: ");
+        for(int i = 0; i < pcScoChecker.length; i++){
+
+            for(int j = 0; j < pcScoChecker.length; j++){
+                if(pcScoChecker[i] == plScoChecker[j]) {
+                    winnerCounter++;
+                    System.out.print(pcScoChecker[i] + ", ");
+                }
+            }
+
+        }
+        System.out.print("Total of " + winnerCounter + " numbers on this ticket. Congrats.\n");
+    }
+
+//StatisticWinnerChecker for all Arrays
+    public void statisticWinnerChecker(){
+        for (int i=0; i < computerTable.checkIndex(); i++) {
+            computerTable.get(i);
+            lineTableComputer = computerTable.get(i);
+            gameXX.rgTable.setDrawnNumbersTable(lineTableComputer);
+            System.out.print("System is comparing all your numbers with the " + i + " computer drawn. Computer numbers are: ");
+            gameXX.getDrawnNumbersTable();
+            for (int j=0; j<playerTable.checkIndex(); j++) {
+                playerTable.get(j);
+                lineTablePlayer = playerTable.get(j);
+                winnerChecker(lineTableComputer, lineTablePlayer);
+            }
+            br();
+        }
+    }
 
 
 

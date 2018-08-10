@@ -55,23 +55,30 @@ public class LottoProgram {
         CustomizeGame customizeGame = new CustomizeGame();
         do {
             //Welcome TEXT and conditions to calibrate Customize Game.
-            show("..**..CUSTOMIZE YOUR GAME..**..\nPlease build your own lottery...");
+            show("\n..**..CUSTOMIZE YOUR GAME..**..\n\n...Please build your own lottery...");
 
-            show("How Many numbers will you drawn?");
+            show("\nHow Many numbers will you drawn?.....");
             customizeGame.gameXX.setHowManyNumbeers(getIntInput(scanner));
 
-            show("How Many numbers would you like to have in the pool");
+            show("How Many numbers would you like to have in the pool?.....");
             customizeGame.gameXX.setNumbersInPool(getIntInput(scanner));
+
+            br();
             customizeGame.xNumbersInPool = customizeGame.gameXX.getNumbersInPool();
 
             if (customizeGame.gameXX.getNumbersInPool() <= customizeGame.gameXX.getHowManyNumbers()){
                 show("You cannot have less or the same numbers in pool than you want to drawn! Try again");
+                br();
             }
             else if ((customizeGame.gameXX.getHowManyNumbers() ==0) || (customizeGame.gameXX.getNumbersInPool() == 0)) {
                 show("You cannot have variable 0");
+                br();
             }
-
-        }while ((customizeGame.gameXX.getHowManyNumbers() >= customizeGame.gameXX.getNumbersInPool()) || (customizeGame.gameXX.getHowManyNumbers() ==0) || (customizeGame.gameXX.getNumbersInPool() == 0) );
+            else if ((customizeGame.gameXX.getHowManyNumbers() < 0) || (customizeGame.gameXX.getNumbersInPool() < 0)) {
+                show("You cannot have negative variables!");
+                br();
+            }
+        }while ((customizeGame.gameXX.getHowManyNumbers() >= customizeGame.gameXX.getNumbersInPool()) || (customizeGame.gameXX.getHowManyNumbers() ==0) || (customizeGame.gameXX.getNumbersInPool() == 0) || (customizeGame.gameXX.getHowManyNumbers() <0) || (customizeGame.gameXX.getNumbersInPool() <0));
 
 
         customizeGame.newCustomizeGame();
@@ -80,15 +87,16 @@ public class LottoProgram {
 
 //2. GAME 649
     public void lottoGame649(){
-        show("..Welcome to 6/49 Game...");
+        show("\n..Welcome to 6/49 Game...\n");
 
         CustomizeGame game649 = new CustomizeGame();
         game649.gameXX.setNumbersInPool(49);
         game649.gameXX.setHowManyNumbeers(6);
         game649.xNumbersInPool = game649.gameXX.getNumbersInPool();
 
-        show("You will have numbers in pool: " + game649.gameXX.getNumbersInPool());
-        show("You will have and numbers drawn by computer: " + game649.gameXX.getHowManyNumbers());
+        show("\nYou will have numbers in pool: " + game649.gameXX.getNumbersInPool());
+        show("\nYou will have and numbers drawn by computer: " + game649.gameXX.getHowManyNumbers());
+        br();
 
         game649.newCustomizeGame();
     }
@@ -106,6 +114,7 @@ public class LottoProgram {
 //******************MENU******************
 //MAIN MENU
     public static String menu() {
+        br();
         String menu = "1. Customize Game \n";
         menu += "2. Game 6/49\n";
         menu += "3. Table Score\n";
@@ -126,8 +135,11 @@ public class LottoProgram {
     }
 
     static void show(String text) {
-        System.out.println(text);
+        System.out.print(text);
     }
 
+    static void br () {
+        System.out.print("\n");
+    }
 
 }//END OF CLASS - LottoProgram
